@@ -1,60 +1,60 @@
 ---
-title: "Installing and Setting up Katalon Studio"
+title: "Установка и настройка Katalon Studio"
 sidebar: katalon_studio_tutorials_sidebar
 permalink: katalon-studio/tutorials/install_setup_katalon_studio.html
-description: "This guide gives you a quick introduction to Katalon Studio, from downloading to activating and running your first automation test."
+description: "Это руководство является кратким введением к Katalon Studio, от загрузки до активации и запуска вашего первого автотеста."
 ---
-Katalon Studio is a simple and powerful test automation solution for not only web and mobile applications but also web services, a revolution of the Selenium and Appium frameworks. Katalon Studio allows users with less experience in programming to work effortlessly by providing a predefined automation framework with hundreds of built-in keywords. This guide explains all the basic steps, from downloading to activating the build, so that new users can start Katalon Studio for the first time.
+Katalon Studio это простое и мощное решение для автоматизации тестирования не только мобильных и веб-приложений, но и веб-сервисов, — революция фреймворков Selenium и Appium. Katalon Studio позволяет пользователям с небольшим опытом в программировании работать без усилий, предоставляя автоматизационный фреймворк с сотнями встроенных ключевых слов. В этом руководстве объясняются все основные этапы, от загрузки до активации приложения, так что новые пользователи могут впервые запустить Katalon Studio.
 
-Download Katalon Studio
+Загрузка Katalon Studio
 -----------------------
 
-Katalon Studio is available for free, supporting both Windows and Mac. Visit the [Katalon Studio Website](https://www.katalon.com/) to download the latest version.
+Katalon Studio бесплатен, поддерживаются версии как для Windows, так и для Mac. Посетите [вебсайт Katalon Studio](https://www.katalon.com/) чтобы загрузить последнюю версию.
 
-Environment Configuration
--------------------------
+Конфигурация окружения
+----------------------
 
-First you need to verify if your computer meets the [System Requirements](http://docs.katalon.com/display/KD/System+Requirements) to automate using Katalon Studio.
+Сначала вам необходимо проверить, соответствует ли ваш компьютер [Системным требованиям](http://docs.katalon.com/display/KD/System+Requirements) для выполнения автоматизации, используя Katalon Studio.
 
-For **Web UI** automation, no additional settings are needed except making sure the required browsers are installed. Check [this list](/x/dAAM) for all supported browsers.
+Для **Web UI**-автоматизации, дополнительных настроек не требуется, кроме установленных необходимых браузеров. Проверьте [этот список](/x/dAAM) поддерживаемых браузеров.
 
-Note: in case you are Windows users, you may want to disable the **User Access Control (UAC)** settings so that Katalon Studio can launch Chrome/Firefox browsers properly. Refer to [this guide](https://www.howtogeek.com/howto/windows-vista/disable-user-account-control-uac-the-easy-way-on-windows-vista/) for steps to disable the UAC settings on different Windows.
+Обратите внимание: в случае если вы - пользователь Windows, вы можете захотеть отключить **User Access Control (UAC)**, чтобы Katalon Studio мог запускать браузеры Chrome/Firefox правильно. Обратитесь к [этому руководству](https://www.howtogeek.com/howto/windows-vista/disable-user-account-control-uac-the-easy-way-on-windows-vista/) за необходимыми действиями по отключению UAC на разных версиях Windows.
 
-For **Mobile** app automation, you need to install **Node.js** and **Appium** and enable the **USB Debugging mode** on your device. Please refer to the [Installation Guide](http://docs.katalon.com/display/KD/Installation+and+Setup) for more details.
+Для автоматизации **мобильных** приложений, вам необходимо установить **Node.js** и **Appium** и активировать режим **USB Debugging mode** на вашем устройстве. Пожалуйста обратитесь к [руководству по установке](http://docs.katalon.com/display/KD/Installation+and+Setup) за подробностями.
 
-Start Katalon Studio
---------------------
+Запуск Katalon Studio
+----------------------
 
-To start Katalon Studio, double-click on the **katalon.exe** (Microsoft Windows)
+Чтобы запустить Katalon Studio, сделайте двойной щелчок на файле **katalon.exe** (Microsoft Windows)
 
 ![Download and Start Katalon Studio](../../images/katalon-studio/tutorials/install_setup_katalon_studio/Starting-Katalon-Studio.png)
 
-or **Katalon Studio** (macOS) file in the directory where you unpack Katalon Studio. For example:
+или файле **Katalon Studio** (macOS) в директории, в которую вы распаковали Katalon Studio. Например:
 
 ![](../../images/katalon-studio/tutorials/install_setup_katalon_studio/Katalon-MacOS.png "init-size")
 
-Once started, the application should display the splash screen similar to the following screenshot:
+После запуска приложение должно отобразить заставку как на следующем скриншоте:
 
 ![Katalon Studio Loading](../../images/katalon-studio/tutorials/install_setup_katalon_studio/image2016-10-20-143A113A21.png)
 
-Activate Katalon Studio
------------------------
+Активация Katalon Studio
+------------------------
 
-After launching Katalon Studio, provide your registered username and password to activate your Katalon Studio. The username and password are the same as the one with which you've registered to download Katalon Studio from [https://www.katalon.com/](https://www.katalon.com/).
+После запуска Katalon Studio введите имя пользователя и пароль, чтобы активировать ваш Katalon Studio. Имя пользователя и пароль те же, что вы использовали при регистрации чтобы загрузить Katalon Studio с [https://www.katalon.com/](https://www.katalon.com/).
 
 ![Katalon Studio Activation pop-up](../../images/katalon-studio/tutorials/install_setup_katalon_studio/image2017-2-16-173A303A12.png)
 
-If you have troubles activating Katalon Studio due to proxy issues, you can click on [Config Proxy](/display/KD/Proxy+Preferences) to configure the proxy setting accordingly.
+Если у вас сложности с активацией Katalon Studio из-за прокси, вы можете нажать на [Config Proxy](/display/KD/Proxy+Preferences), чтобы сконфигурировать прокси соответствующим образом.
 
-If you are unable to access the Internet for activation, you can select Offline Activation to activate offline. You need to request an Offline Activation Code [here](https://www.katalon.com/activation/).
+Если вы не можете получить доступ к Интернет для активации, вы можете выбрать **Offline Activation** чтобы активировать Katalon Studio офлайн. Вам необходимо запросить активационный код [здесь](https://www.katalon.com/activation/).
 
-When your build is activated, the **Quick Guide** screen is displayed to guide you through all major features. You can skip this and view the Quick Guide later from the **Help** menu.
+Когда ваше приложение активировано отображается экран **Quick Guide**, который познакомит вас со всеми основными функциями. Вы можете его пропустить и просмотреть позже, вызвав Quick Guide из меню **Help**.
 
 ![Katalon Studio Quick Guide Overview](../../images/katalon-studio/tutorials/install_setup_katalon_studio/image2017-2-20-113A303A20.png)
 
-You have successfully downloaded and activated Katalon Studio. Next, please refer to the following  guides to setup your test project:
+Вы успешноскачали и активировали Katalon Studio. Далее пожалуйста обратитесь к следующим руководствам, чтобы настроить ваш тестовый проект:
 
-*   [Setting up Web automation project](/katalon-studio/tutorials/get-started/kickstart-automation-testing-using-katalon-studio/)
-*   [Setting up Mobile automation project in Windows](/katalon-studio/tutorials/get-started/set-up-mobile-automation-project-windows/)
-*   [Setting up Mobile automation project in macOS](/katalon-studio/tutorials/get-started/set-up-mobile-automation-project-macos/)
-*   [Setting up API automation project](/katalon-studio/tutorials/get-started/set-up-api-testing-project/)
+*   [Настройка проекта автоматизации Веб-тестирования](/katalon-studio/tutorials/get-started/kickstart-automation-testing-using-katalon-studio/)
+*   [Настройка проекта автоматизации мобильного тестирования в Windows](/katalon-studio/tutorials/get-started/set-up-mobile-automation-project-windows/)
+*   [Настройка проекта автоматизации мобильного тестирования в macOS](/katalon-studio/tutorials/get-started/set-up-mobile-automation-project-macos/)
+*   [Настройка проекта автоматизации тестирования API](/katalon-studio/tutorials/get-started/set-up-api-testing-project/)
