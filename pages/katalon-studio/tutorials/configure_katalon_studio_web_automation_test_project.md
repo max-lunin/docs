@@ -1,76 +1,76 @@
 ---
-title: "Configuring Katalon Studio for Web Testing"
+title: "Конфигурирование Katalon Studio для Веб-тестирования"
 sidebar: katalon_studio_tutorials_sidebar
 permalink: katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project.html
-description: "Katalon Studio supports functional testing of web applications on many browsers. This tutorial explains how to setup a test project in Katalon Studio."
+description: "Katalon Studio поддерживает функциональное тестирование веб-приложений во многих браузерах. Этот урок объясняет как настроить тестовый проект в Katalon Studio."
 ---
-Katalon Studio supports functional testing of web applications on Internet Explorer, Edge, Chrome, Firefox and Safari.
+Katalon Studio поддерживает функциональное тестирование веб-приложений в Internet Explorer, Edge, Chrome, Firefox and Safari.
 
-This tutorial explains how to setup a test project in Katalon Studio. We assume that you are familiar with general principles of automated testing and have minimal knowledge of the Katalon Studio IDE.
+Этот урок объясняет как настроить тестовый проект в Katalon Studio. Мы предполагаем, что вы знакомы с общими принципами автоматизированного тестирования и имеете минимальные знания Katalon Studio.
 
-Internet Explorer Configurations
---------------------------------
+Конфигурация Internet Explorer
+------------------------------
 
-Skip this section if you do not wish to run your automated tests on Internet Expolorer. Otherwise, you need the following setup:
+Пропустите этот раздел если вы не хотите запускать ваши автоматизированные тесты в Internet Expolorer. В противном случае, вам необходимо сделать следующие настройки:
 
-– For IE 7 to IE 11, set the **Security** level for all zones (_Internet, Local Intranet, Trusted sites_ and _Restricted sites_) to the same value. To access this setting, choose **Internet Options** from **Control Panel** of Windows, then switch to the **Security** tab:
+– Для версий IE 7 - IE 11, установите одинаковое значение уровня **Безопасности** для всех зон (_Интернет, Местная интрасеть, Надежные сайты_ и _Опасные сайты_). Чтобы получить доступ к настройкам, выберите **Свойства браузера** в **Панели управления** Windows, затем переключитесь на вкладку **Безопасность**:
 
 ![Internet Options](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/1.-Katalon-Security.png)
 
-– For IE 10 or later, uncheck **Enable Enhanced Protected Mode*** in the **Advanced** tab.
+– Для IE 10 и более поздних версий, снимите галочку с чекбокса **Включить расширенный защищенный режим*** на вкладке **Дополнительно**.
 
 ![Enable Enhanced Protected Mode](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/2.-Katalon-Security.png)
 
-– Set the **Zoom** level on IE to **100%** so that native mouse events can be identified correctly.
+– Установите значение **Масштаб** IE в **100%**, чтобы события мыши могли быть корректно идентифицированы.
 
 ![Zoom level on IE for web automation](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/3.-Katalon-IE.png)
 
-– For IE 11, you need to set a registry entry on the target computer so that the Katalon driver can maintain a connection to the IE instances that it creates.
+– Для IE 11, вам необходимо сделать запись в реестре на целевом компьютере чтобы драйвер Katalon мог поддерживать соединение с экземплярами IE, которые он создает.
 
-1.Type '**_regedit_**' into **Command Prompt** to open **Registry Editor**
+1. Наберите '**_regedit_**' в **командной строке**, чтобы открыть **Редактор реестра**.
 
-2\. Locate the **FEATURE_BFCACHE** subkey (create the **FEATURE_BFCACHE** subkey in case it is not there):
+2\. Найдите подключ **FEATURE_BFCACHE** (создайте подключ **FEATURE_BFCACHE** если он не существует):
 
-2.1 For 32-bit Windows, the key is at _HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BFCACHE_.
+2.1 Для 32-битной Windows этот подключ в _HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BFCACHE_.
 
-2.2. For 64-bit Windows, the key is at _HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BFCACHE_.
+2.2. Для 64-битной Windows этот подключ в _HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BFCACHE_.
 
-3\. Inside this subkey, create a value named **iexplore.exe** with the Type as **REG_DWORD** and the Data as **0**.
+3\. Внутри этого подключа создайте параметр с Именем **iexplore.exe**, Типом **REG_DWORD**, Значением **0**.
 
 ![create a value named iexplore.exe](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/4.-Katalon-Reg_Dword.png)
 
-Katalon Addon for Chrome
-------------------------
+Расширение Katalon для Chrome
+-----------------------------
 
-Katalon Utility, a [**Katalon addon**](https://chrome.google.com/webstore/detail/katalon-utility/ljdobmomdgdljniojadhoplhkpialdid) for Chrome, is required if capturing objects on your active Chrome browsers. You can install this Katalon addon for Chrome from [here](https://chrome.google.com/webstore/detail/katalon-utility/ljdobmomdgdljniojadhoplhkpialdid). Refer to [Web Object Spy](/x/5BZO) and [Record & Playback](/x/RwnR) for more details.
+Katalon Recorder, [**расширение Katalon**](https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid) для Chrome, требуется для захвата объектов в вашем активном браузере Chrome. Вы можете уставновить расширение Katalon для Chrome [отсюда](https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid). Обратитесь к [Web Object Spy](/x/5BZO) и [Record & Playback](/x/RwnR) за подробностями.
 
 ![Katalon Utility](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/5.-Katalon-Addon.png)
 
-Port Configuration
-------------------
+Конфигурация портов
+-------------------
 
-This configuration allows you to decide which port to be used for sending data between Katalon Utility and Katalon Studio.
+Эта конфигурация позволяет вам определить какой порт будет использоваться для отправки данных между Katalon Recorder и Katalon Studio.
 
-1. Once Katalon Utility is added to Chrome, right-click on its icon at the top right of your browser and open the **Options** setting to specify a preferred port to communicate with Katalon Studio (default value is 50000).
+1. Когда расширение Katalon Recorder добавлено в Chrome, сделайте правый клик на его иконке в правом верхнем углу браузера и откройте **Параметры**, чтобы назначить предпочитаемый порт для обмена данными с Katalon Studio (значение по-умолчанию - 50000).
 
 ![open the Options setting](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/6.Katalon-Utility.png)
 
-2\. Open preferences for Katalon Utility in Katalon Studio by accessing **Window > Preferences > Katalon > Utility Addon**. Enter the same port number to be used for communicating with Katalon Utility.
+2\. Откройте настройки Katalon Recorder в Katalon Studio через меню **Window > Preferences > Katalon > Utility Addon**. Введите тот же номер порта, который будет использоваться для обмена данными с Katalon Recorder.
 
 ![Katalon Utility Addon](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/7.-Katalon-Utility-Addon.png)
 
-Proxy Settings
---------------
+Настройки прокси
+----------------
 
-There may be a situation when your machine is setup within a restricted network with a policy to only allow Internet connection through a proxy server. In such a case, proxy settings can be configured from **Preferences > Proxy**. The settings affect both WebUI and WebService test execution. (Contact your network administrator to have necessary information for these settings).
+Возможна  ситуация, когда ваш компьютер настроен в ограниченной сети с политикой доступа в Интернет только через прокси сервер. В этом случае настройки прокси могут быть сделаны в **Preferences > Proxy**. Эти настройки влияют на выполнение тестов как через веб-интерфейс, так и на тесты веб-сервисов. (Обратитесь к своему сетевому администратору, чтобы получить информацию об этих настройках).
 
 ![Katalon Proxy Settings](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/8.-Katalon-Proxy-Settings.png)
 
-Certificate Settings
---------------------
+Настройки сертификатов
+----------------------
 
-Users may find their computers operating in a network that requires some certification in order to access the Internet.
+Пользователи могут обнаружить, чтоих компьютеры работают в сети, требующей сертификации для доступа к Интернет.
 
-Katalon Studio supports the capability to bypass certificate validation so that users with restricted network policies can work with Katalon Studio as usual. This setting can be found from **Project > Settings > Network**. This setting affects both WebUI and WebService testing.
+Katalon Studio поддерживает возможность обхода проверки сертификата, чтобы пользователи с ограниченными сетевыми политиками могли работать с Katalon Studio, как обычно. Эти настройки могут быть найдены в **Project > Settings > Network**. Эти настройки влияют на выполнение тестов как через веб-интерфейс, так и на тесты веб-сервисов.
 
 ![Katalon Certificate Settings](../../images/katalon-studio/tutorials/configure_katalon_studio_web_automation_test_project/9.-Katalon-Certificate-settings.png)
