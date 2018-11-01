@@ -1,86 +1,86 @@
 ---
-title: "Creating test case using Record & Playback"
+title: "Создание тест-кейса, используя Запись и Воспроизведение"
 sidebar: katalon_studio_tutorials_sidebar
 permalink: katalon-studio/tutorials/create_test_case_using_record_playback.html
 redirect_from:
   - "/katalon-studio/tutorials/sample_web_automation_test_project.html"
-description: "Test recording is the easiest way for new automation testers to start learning test automation.This article illustrates how to record the test case easily."
+description: "Запись теста - это самый легкий путь для новичка начать изучение автоматизации тестирования. Эта статья показывает как легко записать тест-кейс."
 ---
-Test recording is the easiest way for new automation testers to start learning test automation. Identifying objects on applications is time-consuming and painful. The [Web Recorder Utility](http://docs.katalon.com/pages/viewpage.action?pageId=5118055) captures your actions being performed on application and converts them into runnable code in the back-end. Using this you can quickly automate a few functionalities of your app and save your time by recording actions which have to be performed quite many times in iterative builds. This Katalon Studio function supports recording and running the same tests on multiple browsers. This article illustrates how to record your test case with ease.
+Запись теста - это самый легкий путь для новичка начать изучение автоматизации тестирования. Идентификация объектов приложения - трудоемка и болезненна. [Web Recorder](http://docs.katalon.com/pages/viewpage.action?pageId=5118055) захватывает ваши действия, выполняемые над приложением, и конвертирует их в исполняемый код в бек-энде. Используя это, вы можете быстро автоматизировать несколько функций вашего приложения и сэкономить время, записывая действия, которые нужно выполнять довольно много раз в итерационных сборках. Эта фукнкция Katalon Studio поддерживает запись и запуск одних и тех же тестов в разных браузерах. Эта статья показывает как легко записать тест-кейс.
 
-1.  [Recording your first test with Katalon Studio Record Web Function](#record-first-test)
-2.  [How to change the Page Folder names and elements names while runtime recording](#change-page-folder-names)
-3.  [How to add Katalon Commands while recording](#add-katalon-commands)
+1.  [Запись вашего первого теста с помощью функции Katalon Studio "Record Web"](#record-first-test)
+2.  [Как изменить имя папки страницы и имена элементов во время записи](#change-page-folder-names)
+3.  [Как добавить команды Katalon во время записи](#add-katalon-commands)
 
-Recording your first test with Katalon Studio Record Web Function
------------------------------------------------------------------
+Запись вашего первого теста с помощью функции Katalon Studio "Record Web"
+-------------------------------------------------------------------------
 
-**Scenario:** To make an appointment
+**Сценарий:** Создать запись на прием
 
-1.  Launch the Application under test (**URL**: [http://demoaut.katalon.com/](http://demoaut.katalon.com/))
-2.  Click on Make Appointment button
-3.  Enter valid username, password and click on Login button
-4.  Make an appointment
+1.  Запустите тестируемое приложение (**URL**: [http://demoaut.katalon.com/](http://demoaut.katalon.com/))
+2.  Нажмите кнопку "Make Appointment"
+3.  Введите действительные имя пользователя и пароль, нажмите на кнопку "Login"
+4.  Создайте запись на прием
 
-Follow the below steps to get familiar with the Record & Playback features for Web UI Test
+Следуйте нижеприведенным шагам, чтобы познакомиться с функцией записи и воспроизведения теста вебинтерфейса.
 
-**Step 1:** Launch Katalon Studio and click **New > Test Case** on the main toolbar. Provide a name for your test case and click **OK**. An empty test case will be created.
+**Шаг 1:** Запустите Katalon Studio и нажмите **New > Test Case** на главной панели инструментов. Введите название вашего тест-кейса и нажмите кнопку **OK**. Будет создан пустой тест-кейс.
 
-![Create-Test-Case](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Create-Test-Case.png)
+![Создание тест-кейса](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Create-Test-Case.png)
 
-**Step 2:** Click on **Record Web** from the main toolbar.
+**Шаг 2:** Нажмите кнопку **Record Web** на главной панели инструментов.
 
 ![Record-Web](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Record-Web.png)
 
-**Step 3:** The **Record** dialog would be displayed.
+**Шаг 3:** Отобразится диалоговое окно **Web Recorder**.
 
 ![Web recorder](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Record-Dialog-300x254.png)
 
-**Step 4:** Select a browser and click on the **Record** button to start recording test case
+**Шаг 4:** Выберите браузер и нажмите кнопку **Record** чтобы начать запись тест-кейса.
 
-![recording-test-case](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/recording-test-case.png)
+![запись тест-кейса](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/recording-test-case.png)
 
-**Step 5:** Once your application has been launched, move the cursor to **'Make Appointment'** button and click on the button (wait till Login page gets loaded)
+**Шаг 5:** Когда приложение будет запущено наведите курсор на кнопку **'Make Appointment'** и нажмите на нее (подождите пока загрузится страница аутентификации).
 
-![Make-Appointment](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Make-Appointment-e1513053243772-1024x512.png)
+![Создание записи на прием](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Make-Appointment-e1513053243772-1024x512.png)
 
-**Step 6:** Enter valid username & password (John Doe & ThisIsNotAPassword) and click on '**Login**' button (wait till page gets loaded)
+**Шаг 6:** Введите действительные имя пользователя и пароль (John Doe и ThisIsNotAPassword), нажмите на кнопку "Login" (подождите пока страница загрузится).
 
-![Login-to-Make-Appointment](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Login-to-Make-Appointment-e1513053339776.png)
+![Аутентификация для создания записи](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Login-to-Make-Appointment-e1513053339776.png)
 
-**Step 7:** Once Make Appointment page has been loaded, select the value **"Hongkong CURA Healthcare Center"** from the Facility drop down.
+**Шаг 7:** Когда страница создания записи загрузится, выберите **"Hongkong CURA Healthcare Center"** из выпадающего списка "Facility".
 
-![Make-Appointment-page](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Make-Appointment-page-e1513067371591.png)
+![Страница создания записи](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Make-Appointment-page-e1513067371591.png)
 
-**Step 8:** Move the cursor towards checkbox '**Apply for hospital readmission**' and click on the check box.
+**Шаг 8:** Наведите курсор на чекбокс '**Apply for hospital readmission**' и кликните на нем.
 
-**Step 9:** Move the cursor towards the radio button and click the radio button of **'Medicaid'.**
+**Шаг 9:** Переместите курсор к радио-кнопкам и кликните на кнопке **'Medicaid'.**
 
-**Step 10:** Click the calendar icon of '**Visit Date'** and click on the date you needed.
+**Шаг 10:** Кликните на иконке календаря в поле '**Visit Date'** и кликните на необходимой дате.
 
-![Calendar](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Calendar-e1513067438109.png)
+![Календарь](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Calendar-e1513067438109.png)
 
-**Step 11:** Move the cursor towards the Comment field and enter the text
+**Шаг 11:** Поместите курсор в поле "Comment"и введите текст.
 
-**Step 12:** Move the cursor towards **Book Appointment** button and click the button
+**Шаг 12:** Наведите курсор на кнопку **Book Appointment** и нажмите на нее.
 
-**Step 13:** You can stop recording anytime by clicking on '**Stop**'. Katalon Studio allows users to select Selection Method for captured objects. **Basic mode** is recommended to manual testers who just started automation journey. With basic mode, Katalon Studio's intelligent selector generator will **automatically generate** robust and unique **selectors** for captured objects.
+**Шаг 13:** Вы можете остановить запись в любой момент, нажав на кнопку '**Stop**'. Katalon Studio позволяет пользователям выбрать метод определения захватываемых объектов. **Basic mode** рекомендуется для ручных тестировщиков, которые только начинают осваивать автоматизацию. В базовом режиме интеллектуальный генератор селекторов Katalon Studio будет **автоматически генерировать** надежные и уникальные **селекторы** для захватываемых объектов.
 
-For advanced testers who wish to **manually input selectors** have the option to select between **CSS** or **XPath mode**. For more details about Selection Method, refer to this [guide](http://docs.katalon.com/pages/viewpage.action?pageId=5118311).
+Для опытных тестировщиков, которые хотят **вводить селекторы вручную** есть выбор между **CSS** и **XPath mode**. За подробностями о методах определения захватываемых объектов обратитесь к этому [руководству](http://docs.katalon.com/pages/viewpage.action?pageId=5118311).
 
 ![Katalon Web Recorder](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Selection-Method-for-captured-objects.png)
 
-**Step 14:** When you are done with recording, click **OK** to save recorded actions into Katalon Studio. You will be prompted to save **captured objects** into **Object Repository** which can be reused whenever needed**.** You can also create a folder to maintain page objects in desired structure. Click **OK** to continue**.**
+**Шаг 14:** Когда вы закончили запись, нажмите кнопку **OK**, чтобы сохранить записанные действия в Katalon Studio. Вам будет предложено сохранить захваченные объекты в **Object Repository** который при необходимости может быть использован повторно**.** Вы также можете создать папку, чтобы хранить и обслуживать объекты страницы в желаемом порядке. Нажмите кнопку **OK** чтобы продолжить**.**
 
 ![Object-Repository](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Object-Repository.png)
 
-**Step 15:** Recorded objects and actions are saved in the test case as shown below.
+**Шаг 15:** Записанные объекты и действия сохранены в тест-кейс, как показано ниже.
 
-![Recorded-objects](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Recorded-objects-e1513067504997.png)
+![Записанные объекты](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Recorded-objects-e1513067504997.png)
 
-Just click on **'Run'** to execute recorded test cases in desired browser.
+Просто нажмите кнопку **'Run'**, чтобы запустить записанный тест-кейс в желаемом браузере.
 
-**Script Code for Record and Playback**
+**Код скрипта записи и воспроизведения**
 
 ```groovy
 WebUI.openBrowser('')
@@ -109,64 +109,63 @@ WebUI.closeBrowser()
 
 ```
 
-How to change the Page Folder names and elements names while runtime recording
-------------------------------------------------------------------------------
+Как изменить имя папки страницы и имена элементов во время записи
+-----------------------------------------------------------------
 
-To organize your test scripts in page object pattern, we need to add test objects in the folder corresponding to page. This helps us in reusing the object and maintain the objects
+Для организации тестовых скриптов по шаблону объекта страницы, необходимо добавить тестовые объекты в папку, соответствующую странице. Это помогает при повторном использовании объекта и обслуживании объектов.
 
-**Scenario:** Login with valid data
+**Сценарий:** Аутентификация с действительными данными
 
-1.  Launch the Application under test (**URL**: [http://demoaut.katalon.com/](http://demoaut.katalon.com/)).
-2.  Click on Make Appointment button (change page and element names).
-3.  Enter valid username, password and click on Login button (change page and element names).
+1.  Запустите тестируемое приложение (**URL**: [http://demoaut.katalon.com/](http://demoaut.katalon.com/)).
+2.  Нажмите на кнопку "Make Appointment" (измените имена страницы и элемента).
+3.  Введите действительные имя пользователя и пароль, нажмите на кнопку "Login" (измените имена страницы и элемента).
 
-**Step 1:** Launch Katalon Studio and click on the **First Test Case** button on the main toolbar. Provide a name for your test case and click **OK**. An empty test case will be created.
+**Шаг 1:** Запустите Katalon Studio и нажмите кнопку **First Test Case** на главной панели инструметов. Введите название вашего тесткейса и нажмите кнопку **OK**. Будет создан пустой тест-кейс.
 
-![Change-Element-Name](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Change-Element-Name.png)
+![Изменение имени элемента](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Change-Element-Name.png)
 
-**Step 2:** Click on **Record Web** from the main toolbar.
+**Шаг 2:** Нажминте на **Record Web** на главной панели инструметов.
 
 ![Record-Web](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Record-Web.png)
 
-**Step 3:** The **Record** dialog would be displayed. Select a browser and click on the **Record** button to start recording test case.
+**Шаг 3:** Отобразится диалоговое окно **Record**. Выберите браузер и нажмите кнопку **Record** чтобы начать запись тест-кейса.
 
-![recording-test-case](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/recording-test-case.png)
+![запись тест-кейса](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/recording-test-case.png)
 
-**Step 4:** Once your application has been launched, move the cursor to **'Make Appointment'** button and click on the button (wait till Login page gets loaded).
+**Шаг 4:** Когда приложение будет запущено наведите курсор на кнопку **'Make Appointment'** и нажмите на нее (подождите пока загрузится страница аутентификации).
 
-![Record-Dialog-Box](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Record-Dialog-Box.png)
+![Диалоговое окно записи](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Record-Dialog-Box.png)
 
-**Step 6:** Rename the page Name of **"Page_CURA Healthcare Service"** to **"Page_Home Page".**
+**Step 5:** Переименуйте страницу с **"Page_CURA Healthcare Service"** на **"Page_Home Page".**
 
-**Step 7:** Select **"a_Make Appointment"** element in Captured Objects Frame.
+**Шаг 6:** Выберите элемент **"a_Make Appointment"** в поле "Captured Objects".
 
-**Step 8:** Rename element name of **"a_Make Appointment"** to **"button_Make Appointment".**
+**Шаг 7:** Переименуйте элемент с **"a_Make Appointment"** на **"button_Make Appointment".**
 
 ![Web-Recorder-Utility](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Web-Recorder-Utility.jpg)
 
-**Step 9:** Then again continue recording for that switch to recording browser, move to **Login Button** click on **Login** button**.**
+**Шаг 8:** Затем продолжайте запись, для чего переключитесь на записываемый браузер, наведите курсор на кнопку **Login** и нажмите на нее**.**
 
-![Login-to-Make-Appointment](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Login-to-Make-Appointment-e1513053339776.png)
+![Аутентификация для создания записи](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Login-to-Make-Appointment-e1513053339776.png)
 
-**Step 10:** Repeat same steps above to change the name of object **Login** and its folder.
+**Шаг 9:** Повторите шаги, приведенные выше, чтобы переименовать объект **Login** и его папку.
 
-**Step 11:** Rename the Page Name of **"Page_CURA Healthcare Service"** to **"Page_Login".**
+**Шаг 10:** Переименуйте страницу с **"Page_CURA Healthcare Service"** на **"Page_Login".**
 
 ![Web-Recorder-Utility-2](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Web-Recorder-Utility-2.jpg)
 
-**Step 12:** You can stop recording anytime by clicking on '**Stop**'. When you are done with recording, click **OK** to save recorded actions into Katalon Studio.
+**Шаг 11:** Вы можете остановить запись в любой момент, нажав на кнопку '**Stop**'. Когда вы закончили запись, нажмите кнопку **OK**, чтобы сохранить записанные действия в Katalon Studio. 
 
-**Step 13:** You will be prompted to save captured objects into Object Repository which can be reused whenever needed**.** You can also create a folder to maintain page objects in desired structure. Click **OK** to continue**.**
-
+**Шаг 12:** Вам будет предложено сохранить захваченные объекты в **Object Repository** который при необходимости может быть использован повторно**.** Вы также можете создать папку, чтобы хранить и обслуживать объекты страницы в желаемом порядке. Для продолжения нажмите кнопку **OK**.
 ![Objects-repository](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Objects-repository.png)
 
-**Step 14:** Recorded objects and actions are saved in the test case as shown below.
+**Шаг 13:** Записанные объекты и действия сохранены в тест-кейс, как показано ниже..
 
-![Recorded-objects-and-actions](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Recorded-objects-and-actions-e1513069057639.png)
+![Записанные объекты и действия-2](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Recorded-objects-and-actions-e1513069057639.png)
 
-Just click on **'Run'** to execute recorded test cases in desired browser
+Просто нажмите кнопку **'Run'**, чтобы запустить записанный тест-кейс в желаемом браузере.
 
-**Source Code:**
+**Исходный код:**
 
 ```groovy
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject</p>
@@ -184,92 +183,86 @@ WebUI.closeBrowser()
 
 ```
 
-How to add Katalon Commands while recording
--------------------------------------------
+Как добавить команды Katalon во время записи
+--------------------------------------------
 
-**Scenario:** Verify the Login functionality with validations
+**Сценарий:** Проверка аутентификации с валидацией
 
-1.  Launch the Application under test (url: http://demoaut.katalon.com/)
-2.  Verify the Make Appointment button is present
-3.  Click on Make Appointment button
-4.  Verify the Login button is visible
-5.  Enter valid username, password and click on Login button
+1.  Запустите тестируемое приложение (url: http://demoaut.katalon.com/)
+2.  Проверьте наличие кнопки "Make Appointment"
+3.  Нажмите на кнопку "Make Appointment"
+4.  Проверьте видимость кнопки "Login"
+5.  Введите действительные имя пользователя и пароль, нажмите на кнопку "Login"
 
-At runtime recording, Katalon Studio allow users to add additional commands like
+Во время записи Katalon Studio позволяет пользователям добавлять дополнительные команды, такие как команды основных действий, команды проверки, команды синхронизации.
 
-Basic action commands, validation point commands, synchronization commands
+**Шаг 1:** Запустите Katalon Studio и нажмите кнопку **New Test Case** на главной панели инструметов. Введите название вашего тесткейса и нажмите кнопку **OK**. Будет создан пустой тест-кейс.
 
-**Step 1:** Launch Katalon Studio and click on the **New Test Case** button on the main toolbar. Provide a name for your test case and click **OK**. An empty test case will be created.
+![Создание тест-кейса](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Create-Test-Case.png)
 
-![Create-Test-Case](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Create-Test-Case.png)
-
-**Step 2:** Click on **Record Web** from the main toolbar.
+**Шаг 2:** Нажминте на **Record Web** на главной панели инструметов.
 
 ![Record-Web](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Record-Web.png)
 
-**Step 3:** The **Record** dialog would be displayed.
+**Шаг 3:** Отобразится диалоговое окно **Record**. 
 
-**![Record-Dialog](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Record-Dialog.png) **
+**![Диалоговое окно Record](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Record-Dialog.png) **
 
-**Step 4:** Select a browser and click on the **Record** button to start recording test case
+**Шаг 4:** Выберите браузер и нажмите кнопку **Record** чтобы начать запись тест-кейса.
 
-![recording-test-case](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/recording-test-case.png)
+![Запись тест-кейса](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/recording-test-case.png)
 
-**Step 5:** Once your application has been launched, move the cursor to **'Make Appointment'** button and click on the button (wait till Login page gets loaded)
+**Шаг 5:** Когда приложение будет запущено наведите курсор на кнопку **'Make Appointment'** и нажмите на нее (подождите пока загрузится страница аутентификации).
 
-![Make-Appointment](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Make-Appointment-e1513053243772.png)
+![Создание записи](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Make-Appointment-e1513053243772.png)
 
-**Step 6:** We can add validation commands in runtime record for that switch to **Katalon record dialog** box and click on **Add** Button before that we need to select the step where to add the next line of **validations commands**
+**Ifu 6:** Мы можем добавить команды проверки во время записи, для этого нужно переключиться на окно **Katalon record dialog** и нажать кнопку **Add** перед чем необходимо выбрать шаг, после которого будет добавлена строка **команд проверки**.
 
 ![Katalon-Record-Dialog](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Katalon-Record-Dialog.png)
 
-**Step 7:** Click on **Add Validation Point**
+**Шаг 7:** Нажмите на кнопку **Add**.
 
-**Step 8:** It will add default command **Verify Element Present**
+**Шаг 8:** Это добавит команду по-умолчанию **Accept Alert**, справа от которой располагается маркер выпадающего списка. Нажмите на маркер и выберите из списка **Verify Element Present**. Команде необходимо передать объект, для этого сделайте двойной щелчок в столбце **Object**. Откроется окно **Captured objects**, в котором нужно выбрать **button_Make Appointmen** и нажать кнопку **OK**.
 
-**Step 9:** We need to give time for **Verify Element Present** Katalon Studio providing the default time 30 seconds\] for that tap on Action data of **Verify Element Present** and give 30 seconds \[as per you needed\] then click on **OK** Button.
+![Verify-Element-Present](http://prntscr.com/ld441c)
 
-![Verify-Element-Present](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Verify-Element-Present.png)
+**Шаг 9:** Необходимо дать время для проверки наличия элемента **"Verify Element Present"**. Время задержки по-умолчанию - 0 секунд. Чтобы его изменить сделайте двойной щелчок в столбце **Input** и в открывшемся окне **Input** для параметра **timeOut** введите значение **Value** по вашему желанию и нажмите кнопку **OK**.
 
-**Step 10:** It display the **Verify Element Present** command with time on **record dialog box**
+![Set-timeOut-Value](http://prntscr.com/ld4gij)
 
-**Step 11:** We need to pass the object for **Verify Element Present** command for that click on element column of **Verify Element Present** it will display the page object dialog box and choose the object of **Login Button** \[as per you needed\] and click on **OK** Button.
+**Шаг 10:** В окне **Web Recorder** отобразится команда **Verify Element Present** с **Object = button_Make Appointmen** и **Input** с выбранным значением.
 
-![Login-Verify-Element-Present](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Login-Verify-Element-Present.png)
-
-**Step 12: Verify Element Present** command displayed with modified object
-
-**Step 13:** Then again continue recording for that switch to recording browser, move to **Make Appointment** button and click on **Make Appointment** button**.**
+**Шаг 11:** Затем продолжайте запись, для чего переключитесь на записываемый браузер, наведите курсор на кнопку **Make Appointment** и нажмите на нее.
 
 ![Login-to-Make-Appointment](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Login-to-Make-Appointment-e1513053339776.png)
 
-**Step 14:** We need to add validation for **Make Appointment** button for that we shift to **Record Dialog box**
+**Шаг 12:** Необходимо добавить проверку для кнопки **Login** для чего переключитесь на окно **Web Recorder**.
 
-**Step 15:** Click on **Add** Button it would display the dropdown list of commands list then click on **Add Validation point**
+**Шаг 13:** Нажмите на кнопку **Add**. 
 
-**Step 16:** It will add default command **Verify Element Present**
+**Шаг 14:** Это добавит команду по-умолчанию **Accept Alert**.
 
-**Step 17:** Now we need to change **Verify Element Present** command to **Verify Element Visible** for that double click on action column of **Verify Element Present** then it would display the down arrow then again click on down arrow it would display **all** **Validation commands.** Click on **Verify Element Visible** command \[or use others as per you needed\].
+**Шаг 15:** Теперь необходимо изменить **Accept Alert** на **Verify Element Visible**. Нажмите на маркер выпадающего списка и выберите **Verify Element Visible**. 
 
 ![Verify-Element-Visible](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Verify-Element-Visible.png)
 
-**Step 18:** It display the changed validation point on **Record dialog** box
+**Шаг 16:** В окне **Web Recorder** будет отображена команда **Verify Element Visible**. 
 
-**Step 19:** We need to pass the object for **Verify Element Visible** command for that click on element column of **Verify Element Visible** it would display the **page object** dialog box expand the page objects folder and choose the object of **Login Button** \[as per you needed\] and click on **OK** Button.
+**Шаг 17:** Команде **Verify Element Visible** необходимо передать объект. Для этого сделайте двойной щелчок в столбце **Object**. Откроется окно **Captured objects**, в котором нужно выбрать **button_Login** и нажать кнопку **OK**.
 
-**Step 20: Verify Element Visible** command is displayed with modified object.
+**Шаг 18:** Команда **Verify Element Visible** будет отображена с модифицированным объектом.
 
-**Step 21:** You can stop recording anytime by clicking on '**Stop**'. When you are done with recording, click **OK** to save recorded actions into Katalon Studio.
+**Шаг 19:** Вы можете остановить запись в любой момент, нажав на кнопку '**Stop**'. Когда вы закончили запись, нажмите кнопку **OK**, чтобы сохранить записанные действия в Katalon Studio. 
 
 ![recorded-actions](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/recorded-actions.png)
 
-**Step 22:** You will be prompted to save captured objects into Object Repository which can be reused whenever needed**.** You can also create a folder to maintain page objects in desired structure. Click **OK** to continue**.**
+**Шаг 20:** Вам будет предложено сохранить захваченные объекты в **Object Repository** который при необходимости может быть использован повторно**.** Вы также можете создать папку, чтобы хранить и обслуживать объекты страницы в желаемом порядке. Для продолжения нажмите кнопку **OK**.
 
-**Step 23:** Recorded objects and actions are saved in the test case as shown below.
+**Шаг 21:** Записанные объекты и действия сохранены в тест-кейс, как показано ниже..
 
-![Recorded-objects-and-actions-3](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Recorded-objects-and-actions-3-e1513069217546.png)
+![Записанные объекты и действия-3](../../images/katalon-studio/tutorials/create_test_case_using_record_playback/Recorded-objects-and-actions-3-e1513069217546.png)
 
-**Script code:**
+**Исходный код:**
 
 ```groovy
 WebUI.openBrowser('')</p>
@@ -287,16 +280,16 @@ WebUI.closeBrowser()
 
 ```
 
-Thus we can record the actions being performed using Katalon Studio. There are few actions which cannot be recorded.
+Итак, мы можем записывать выполняемые действия с помощью Katalon Studio. Существует несколько действий, которые не могут быть записаны.
 
-### What cannot be recorded?
+### Что не может быть записано?
 
-Though recording your tests saves time, we cannot validate few scenarios such as Web Table handling, switching to multiple frames, switching to windows, handling captcha, image recognition, video playbacks. Here are the main drawbacks
+Хотя запись тестов экономит время, мы не можем проверять несколько сценариев, таких как обработка веб-таблиц, переключение между фреймами, переключение окон, обработку капчей, распознавание изображений, воспроизведение видео. Вот основные недостатки: 
 
-a) Using a recorder we cannot handle dynamically changing elements (since we need to customize Xpath/CSS)
+a) Используя рекордер мы не можем обрабатывать динамически изменяющиеся элементы (поскольку нам нужно настроить Xpath / CSS)
 
-b) We cannot reuse the code wherever we need it. And it is quite challenging for debugging.
+b) Мы не можем использовать код повторно когда необходимо. И это довольно сложно для отладки.
 
-You can download source code [here](https://github.com/katalon-studio/katalon-web-automation).
+Вы можете скачать исходный код [здесь](https://github.com/katalon-studio/katalon-web-automation).
 
-For further instructions and help, please refer to [Recording WebUI Test](/x/RwnR) and [Record and Playback](https://www.katalon.com/videos/tutorial-videos/create-test-case-record-playback/) tutorials.
+За дальнейшими инструкциями и помощью обратитесь к урокам [Запись тестов вебинтерфейса](/x/RwnR) и [Запись и воспроизведение](https://www.katalon.com/videos/tutorial-videos/create-test-case-record-playback/).
